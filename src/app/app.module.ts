@@ -3,8 +3,23 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {
+  MatGridListModule,
+  MatCardModule,
+  MatMenuModule,
+  MatIconModule,
+  MatButtonModule,
+  MatCheckboxModule,
+  MatToolbarModule,
+  MatSidenavModule,
+  MatListModule} from '@angular/material';
+import { DashboardComponent } from './materials/dashboard/dashboard.component';
+import { LayoutModule } from '@angular/cdk/layout';
 
-const appRoutes: Routes = [
+
+
+const routes: Routes = [
   {
     path: '',
     redirectTo: 'home',
@@ -19,11 +34,23 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes),
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    LayoutModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [
 
