@@ -16,7 +16,7 @@ import {
   MatListModule} from '@angular/material';
 import { DashboardComponent } from './materials/dashboard/dashboard.component';
 import { LayoutModule } from '@angular/cdk/layout';
-
+import { NavbarComponent } from './materials/navbar/navbar.component';
 
 
 const routes: Routes = [
@@ -35,7 +35,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
-    DashboardComponent
+    DashboardComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
