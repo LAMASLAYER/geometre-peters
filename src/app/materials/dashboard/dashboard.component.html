@@ -1,10 +1,10 @@
+
 <div class="grid-container">
   <mat-grid-list cols="2" rowHeight="350px">
     <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
       <mat-card [style.backgroundSize]="'100%'" [ngStyle]="{'background': 'url(' + card.url + ') no-repeat'}" class="dashboard-card">
         <mat-card-header>
           <mat-card-title>
-            {{card.title}}
             <mat-menu #menu="matMenu" xPosition="before">
               <button mat-menu-item>Expand</button>
               <button mat-menu-item>Remove</button>
@@ -22,9 +22,11 @@
               <li>{{card.list6}}</li>
               <li>{{card.list7}}</li>
             </ul>
+            <a *ngIf="card.type=='contact'" style="float: right;" href="https://www.facebook.com/geometre.peters/" class="fa fa-facebook"></a>
           </div>
         </mat-card-content>
       </mat-card>
     </mat-grid-tile>
   </mat-grid-list>
 </div>
+

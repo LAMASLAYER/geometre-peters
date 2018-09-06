@@ -45,7 +45,8 @@ export class DashboardComponent {
         { cols: 1, rows: 1 , url: '../../../assets/call.jpg',
           list1: 'Tel: +32 495 56 02 85',
           list2: 'Mail: pters.kevin@gmail.com',
-          list3: 'Adresse: Voie de l\'Air Pur 222, 4052 Beaufays'
+          list3: 'Adresse: Voie de l\'Air Pur 222, 4052 Beaufays',
+          type: 'contact'
         }
       ];
     })
