@@ -24,6 +24,10 @@ li {
   list-style-type: none;
 }
 
+li:hover {
+  opacity: 0.5;
+}
+
 /* Style all font awesome icons */
 .fa {
   padding: 20px;
@@ -50,4 +54,8 @@ li {
 .fa-twitter {
   background: #55ACEE;
   color: white;
+}
+
+a {
+  text-decoration: none;
 }

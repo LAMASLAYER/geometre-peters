@@ -13,12 +13,16 @@
         </mat-card-header>
         <mat-card-content class="dashboard-card-content">
           <div>
-            <ul style="text-align: right; font-family: 'Open Sans Condensed'; cursor: default"
+            <ul style="font-family: 'Open Sans Condensed';color:black; cursor: default"
                 [style.fontSize]="card.fontSize"
                 [style.fontWeight]="card.fontWeight"
-                [style.backgroundColor]="card.bgc">
-              <li>{{card.list1}}</li>
-              <li>{{card.list2}}</li>
+                [style.backgroundColor]="card.bgc"
+                [style.textAlign]="card.text"
+                [style.padding]="card.padding">
+              <li *ngIf="card.type=='other'"  [style.cursor]="card.cursor">{{card.list1}}</li>
+              <li *ngIf="card.type=='contact'"  [style.cursor]="card.cursor"><a style="color:black" href="tel:+32495560285">{{card.list1}}</a></li>
+              <li *ngIf="card.type=='other'"  [style.cursor]="card.cursor">{{card.list2}}</li>
+              <li *ngIf="card.type=='contact'"  [style.cursor]="card.cursor"><a style="color:black" href="mailto:pters.kevin@gmail.com">{{card.list2}}</a></li>
               <li>{{card.list3}}</li>
               <li>{{card.list4}}</li>
               <li>{{card.list5}}</li>

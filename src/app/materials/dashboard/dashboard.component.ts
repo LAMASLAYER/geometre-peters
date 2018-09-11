@@ -25,15 +25,23 @@ export class DashboardComponent {
             list7: 'Implantation de batiment',
             fontSize: 'medium',
             fontWeight: '800',
-            bgc: 'white'
-            },
+            bgc: 'white',
+            text: 'center',
+            padding: '0',
+            type: 'other',
+          },
           { cols: 1, rows: 1 , url: '../../../assets/call.jpg',
-            list1: 'Tel: +32 495 56 02 85',
-            list2: 'Mail: pters.kevin@gmail.com',
-            list3: 'Adresse: Voie de l\'Air Pur 222, 4052 Beaufays',
+            list1: 'Téléphone',
+            list2: 'Mail',
+            list3: 'Voie de l\'Air Pur 222, 4052 Beaufays',
             fontSize: 'medium',
             fontWeight: '800',
-            bgc: 'white'
+            bgc: 'white',
+            text: 'center',
+            padding: '0',
+            cursor: 'pointer',
+            opacity: '0.5',
+            type: 'contact',
           }        ];
       }
 
@@ -47,14 +55,17 @@ export class DashboardComponent {
           list5: 'Etat des lieux',
           list6: 'Expertise immobilière',
           list7: 'Implantation de batiment',
-          fontSize: 'x-large'
+          fontSize: 'x-large',
+          text: 'right',
+          type: 'other',
         },
         { cols: 1, rows: 1 , url: '../../../assets/call.jpg',
           list1: 'Tel: +32 495 56 02 85',
           list2: 'Mail: pters.kevin@gmail.com',
           list3: 'Adresse: Voie de l\'Air Pur 222, 4052 Beaufays',
           type: 'contact',
-          fontSize: 'x-large'
+          fontSize: 'x-large',
+          text: 'right'
         }
       ];
     })
