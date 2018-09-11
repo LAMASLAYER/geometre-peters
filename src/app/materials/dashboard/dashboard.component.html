@@ -2,7 +2,7 @@
 <div class="grid-container">
   <mat-grid-list cols="2" rowHeight="350px">
     <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
-      <mat-card [style.backgroundSize]="'100%'" [ngStyle]="{'background': 'url(' + card.url + ') no-repeat'}" class="dashboard-card">
+      <mat-card [style.backgroundSize]="'cover'" [ngStyle]="{'background': 'url(' + card.url + ') no-repeat'}" class="dashboard-card">
         <mat-card-header>
           <mat-card-title>
             <mat-menu #menu="matMenu" xPosition="before">
@@ -13,7 +13,10 @@
         </mat-card-header>
         <mat-card-content class="dashboard-card-content">
           <div>
-            <ul style="text-align: right; font-family: 'Open Sans Condensed'; font-size:x-large; cursor: default">
+            <ul style="text-align: right; font-family: 'Open Sans Condensed'; cursor: default"
+                [style.fontSize]="card.fontSize"
+                [style.fontWeight]="card.fontWeight"
+                [style.backgroundColor]="card.bgc">
               <li>{{card.list1}}</li>
               <li>{{card.list2}}</li>
               <li>{{card.list3}}</li>
