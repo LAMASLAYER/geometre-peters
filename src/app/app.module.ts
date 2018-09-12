@@ -27,6 +27,11 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: '/',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
+  {
     path: 'home',
     component: HomeComponent
   }
@@ -57,6 +62,6 @@ const routes: Routes = [
   providers: [
     {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [HomeComponent]
 })
 export class AppModule { }
