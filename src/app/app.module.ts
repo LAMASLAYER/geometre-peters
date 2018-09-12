@@ -19,7 +19,6 @@ import { DashboardComponent } from './materials/dashboard/dashboard.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { NavbarComponent } from './materials/navbar/navbar.component';
 
-
 const routes: Routes = [
   {
     path: '',
@@ -37,7 +36,7 @@ const routes: Routes = [
     AppComponent,
     HomeComponent,
     DashboardComponent,
-    NavbarComponent
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
