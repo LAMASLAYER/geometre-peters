@@ -62,6 +62,6 @@ const routes: Routes = [
   providers: [
     {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],
-  bootstrap: [HomeComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
