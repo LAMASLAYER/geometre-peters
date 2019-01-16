@@ -14,7 +14,6 @@ export class DashboardComponent {
     map(({ matches }) => {
       if (matches) {
         return [
-          { cols: 2, rows: 1, url: '../../../assets/mobilebanner.png' },
           { cols: 1, rows: 1 , url: '../../../assets/buildings.jpeg',
             list1: 'Relevé topographique',
             list2: 'Bornage',
@@ -46,7 +45,6 @@ export class DashboardComponent {
       }
 
       return [
-        { cols: 2, rows: 1, url: '../../../assets/banner.jpg'},
         { cols: 1, rows: 1, url: '../../../assets/buildings.jpeg' ,
           list1: 'Relevé topographique',
           list2: 'Bornage',

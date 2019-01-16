@@ -1,5 +1,6 @@
 
 <div class="grid-container">
+  <img src="../../../assets/logo2.png" width="20%" min-width="500px">
   <mat-grid-list cols="2" rowHeight="350px">
     <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
       <mat-card [style.backgroundSize]="'cover'" [ngStyle]="{'background': 'url(' + card.url + ') no-repeat'}" class="dashboard-card">
