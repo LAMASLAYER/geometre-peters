@@ -1,40 +1,171 @@
 
 <div class="grid-container">
-  <img src="../../../assets/logo2.png" width="20%" min-width="500px">
-  <mat-grid-list cols="2" rowHeight="350px">
-    <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
-      <mat-card [style.backgroundSize]="'cover'" [ngStyle]="{'background': 'url(' + card.url + ') no-repeat'}" class="dashboard-card">
-        <mat-card-header>
-          <mat-card-title>
-            <mat-menu #menu="matMenu" xPosition="before">
-              <button mat-menu-item>Expand</button>
-              <button mat-menu-item>Remove</button>
-            </mat-menu>
-          </mat-card-title>
-        </mat-card-header>
-        <mat-card-content class="dashboard-card-content">
-          <div>
-            <ul style="font-family: 'Open Sans Condensed';color:black; cursor: default"
-                [style.fontSize]="card.fontSize"
-                [style.fontWeight]="card.fontWeight"
-                [style.backgroundColor]="card.bgc"
-                [style.textAlign]="card.text"
-                [style.padding]="card.padding">
-              <li *ngIf="card.type=='other'"  [style.cursor]="card.cursor">{{card.list1}}</li>
-              <li *ngIf="card.type=='contact'"  [style.cursor]="card.cursor"><a style="color:black" href="tel:+32495560285">{{card.list1}}</a></li>
-              <li *ngIf="card.type=='other'"  [style.cursor]="card.cursor">{{card.list2}}</li>
-              <li *ngIf="card.type=='contact'"  [style.cursor]="card.cursor"><a style="color:black" href="mailto:pters.kevin@gmail.com">{{card.list2}}</a></li>
-              <li>{{card.list3}}</li>
-              <li>{{card.list4}}</li>
-              <li>{{card.list5}}</li>
-              <li>{{card.list6}}</li>
-              <li>{{card.list7}}</li>
-            </ul>
-            <a *ngIf="card.type=='contact'" style="float: right;" href="https://www.facebook.com/geometre.peters/" class="fa fa-facebook"></a>
-          </div>
-        </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
+  <img (click)="main = true; about = false; openMenu = false; services = false" src="../../../assets/logo2.png" width="100px" style="cursor: pointer">
+  <ul *ngIf="mobile" style="float:right; font-family: monospace;">
+    <li (click)="main = true; about = false; services = false" style="float:left; margin-right: 15px; cursor: pointer">Accueil</li>
+    <li (click)="main=false; about= true; services = false" style="float:left; margin-right: 15px; cursor: pointer">À propos</li>
+    <li (click)="main = false; about = false; services=true" style="float:left; margin-right: 15px; cursor: pointer">Services</li>
+    <!--<li style="float:left; margin-right: 15px; cursor: pointer">Contact</li>-->
+    <li style="float:left; margin-right: 15px; cursor: pointer">+32 495 56 02 85</li>
+    <img id="comp-jr0j6jyb10imageimageimage" alt="" data-type="image" src="https://static.wixstatic.com/media/0fdef751204647a3bbd7eaa2827ed4f9.png/v1/fill/w_20,h_20,al_c,q_80,usm_0.66_1.00_0.01/facebook.webp" style="cursor: pointer; width: 20px; height: 20px; object-fit: cover;">
+  </ul>
+  <div style="float:right; cursor:pointer" *ngIf="!mobile" (click)="openMenu=!openMenu">
+    <div class="mobileMenu"></div>
+    <div class="mobileMenu"></div>
+    <div class="mobileMenu"></div>
+  </div>
+</div>
+<div *ngIf="openMenu">
+  <ul style="background-color: grey; color:white; font-family: monospace; font-weight: bold; padding: 0;">
+    <li (click)="main = true; about = false; openMenu = false; services=false" style="padding-top:5px"><p style="margin-left: 10px">Accueil</p></li>
+    <hr/>
+    <li (click)="main=false; about= true; openMenu=false; services=false"><p style="margin-left: 10px">À propos</p></li>
+    <hr/>
+    <li><p (click)="main = false; about = false; services=true; openMenu = false" style="margin-left: 10px">Services</p>
+   </li>
+    <hr/>
+    <!--<li style="padding-bottom: 5px"><p style="margin-left: 10px">Contact</p></li>-->
+  </ul>
 </div>
 
+<div *ngIf="!mobile && main"style="background-color: gold; text-align: center; margin: 0; font-family: 'Century Gothic'; padding-top:10%; padding-bottom: 10%">
+  <h1>Géomètre Péters</h1>
+  <h4>Votre satisfaction est notre priorité</h4>
+</div>
+
+<div *ngIf="mobile && main"style="background-color: gold; text-align: center; margin: 0; font-family: 'Century Gothic'; padding-top:3%; padding-bottom: 3%; font-size: 30px;">
+    <h1>Géomètre Péters</h1>
+    <h4>Votre satisfaction est notre priorité</h4>
+</div>
+<img *ngIf="main" src="../../../assets/banner.png" width="100%"/>
+
+<div style="background-color: lightgoldenrodyellow; text-align: center; font-family: 'Century Gothic'; padding-top: 10px; padding-bottom: 10px" *ngIf="about && !mobile">
+  <h1>Qui sommes-nous</h1>
+  <p style="color:lightgray">Votre Géomètre fiable</p>
+  <p>Notre mission à Géomètre Péters est simple :</p>
+  <p>fournir des services de grande qualité à nos clients.</p>
+  <p>Notre équipe fait tout pour répondre aux besoins spécifiques de chaque projet.</p>
+  <p>Grâce à une communication transparente et à une qualité de service exceptionnelle, nous espérons que vous trouverez ce que vous cherchez en faisant appel à notre Géomètre.</p>
+  <p>Pour plus d'informations ou pour des demandes générales, contactez-nous dès aujourd'hui.</p>
+</div>
+
+
+<div style="background-color: lightgoldenrodyellow; text-align: center; font-family: 'Century Gothic'; padding-top: 10px; padding-bottom: 10px" *ngIf="about && mobile">
+  <h1>Qui sommes-nous</h1>
+  <p style="color:lightgray">Votre Géomètre fiable</p>
+  <p>Notre mission à Géomètre Péters est simple :</p>
+  <p>fournir des services de grande qualité à nos clients.</p>
+  <p>Notre équipe fait tout pour répondre aux besoins spécifiques de chaque projet.</p>
+  <p>Grâce à une communication transparente et à une qualité de service exceptionnelle, nous espérons que vous trouverez ce que vous cherchez en faisant appel à notre Géomètre.</p>
+  <p>Pour plus d'informations ou pour des demandes générales, contactez-nous dès aujourd'hui.</p>
+</div>
+
+<div style="font-family: 'Century Gothic'; text-align: center" *ngIf="services && !mobile">
+  <h1 style="color:goldenrod">Des services professionnels</h1>
+  <h4>Nos services</h4>
+  <br/>
+  <br/>
+  <div style="text-align: center">
+    <h3 style="color:goldenrod">Relevé topographique et technique</h3>
+    <br/>
+    <p>Géomètre Péters s’engage à remplir sa mission, et à réaliser ce service avec soin. Vous pouvez compter sur nous pour nous montrer professionnels, ponctuels et efficaces, et pour nous assurer votre satisfaction à chaque étape du processus.</p>
+    <img src="../../../assets/work.png" width="100%"/>
+  </div>
+  <div style="text-align: center">
+    <h3 style="color:goldenrod">Division de terrain</h3>
+    <br/>
+    <p>
+      Afin de diviser un terrain, vous devez passer par les étapes suivantes :
+    </p>
+    <ul style="text-align: left">
+      <li>Réalisation d'un plan de mesurage de la situation existante.</li>
+      <li>Division de la parcelle comme vous le désirez, et réalisation d'un plan de division qui sera fournit au cadastre.</li>
+      <li>Demande d'un nouveau numéro cadastral qui sera attribué à la nouvelle parcelle.</li>
+      <li>Si vous le désirez, nous pouvons matérialisez la division par des bornes physique.</li>
+    </ul>
+    <img src="../../../assets/field.png" width="100%"/>
+  </div>
+  <div style="text-align: center">
+    <h3 style="color:goldenrod">Bornage</h3>
+    <br/>
+    <p>Depuis sa création, Géomètre Péters est l'un des noms les plus fiables du secteur. Engagez-nous pour ce service, et constatez par vous-même que nous répondons aux besoins et attentes de chaque client.</p>
+    <img src="../../../assets/man.png" width="100%"/>
+  </div>
+  <div style="text-align: center">
+    <h3 style="color:goldenrod">Etat des lieux et expertise immobilière
+    </h3>
+    <br/>
+  </div>
+  <div style="text-align: center">
+    <h3 style="color:goldenrod">Calcul de quotité
+    </h3>
+    <br/>
+  </div>
+  <div style="text-align: center">
+    <h3 style="color:goldenrod">Implantation de bâtiment
+    </h3>
+    <br/>
+  </div>
+  <div style="text-align: center">
+    <h3 style="color:goldenrod">A venir... Photogrammétrie par drone
+    </h3>
+    <br/>
+  </div>
+</div>
+
+<div style="font-family: 'Century Gothic'; text-align: center" *ngIf="services && mobile">
+  <h1 style="color:goldenrod">Des services professionnels</h1>
+  <h4>Nos services</h4>
+  <br/>
+  <br/>
+  <div class="row">
+  <div class="col-6" style="text-align: center">
+    <h3 style="color:goldenrod">Relevé topographique et technique</h3>
+    <br/>
+    <p>Géomètre Péters s’engage à remplir sa mission, et à réaliser ce service avec soin. Vous pouvez compter sur nous pour nous montrer professionnels, ponctuels et efficaces, et pour nous assurer votre satisfaction à chaque étape du processus.</p>
+  </div>
+    <div class="col-6">
+      <img src="../../../assets/work.png" width="30%"/>
+    </div>
+  </div>
+  <div style="text-align: center">
+    <h3 style="color:goldenrod">Division de terrain</h3>
+    <br/>
+    <p>
+      Afin de diviser un terrain, vous devez passer par les étapes suivantes :
+    </p>
+    <ul>
+      <li>Réalisation d'un plan de mesurage de la situation existante.</li>
+      <li>Division de la parcelle comme vous le désirez, et réalisation d'un plan de division qui sera fournit au cadastre.</li>
+      <li>Demande d'un nouveau numéro cadastral qui sera attribué à la nouvelle parcelle.</li>
+      <li>Si vous le désirez, nous pouvons matérialisez la division par des bornes physique.</li>
+    </ul>
+    <img src="../../../assets/field.png" width="30%"/>
+  </div>
+  <div style="text-align: center">
+    <h3 style="color:goldenrod">Bornage</h3>
+    <br/>
+    <p>Depuis sa création, Géomètre Péters est l'un des noms les plus fiables du secteur. Engagez-nous pour ce service, et constatez par vous-même que nous répondons aux besoins et attentes de chaque client.</p>
+    <img src="../../../assets/man.png" width="30%"/>
+  </div>
+  <div style="text-align: center">
+    <h3 style="color:goldenrod">Etat des lieux et expertise immobilière
+    </h3>
+    <br/>
+  </div>
+  <div style="text-align: center">
+    <h3 style="color:goldenrod">Calcul de quotité
+    </h3>
+    <br/>
+  </div>
+  <div style="text-align: center">
+    <h3 style="color:goldenrod">Implantation de bâtiment
+    </h3>
+    <br/>
+  </div>
+  <div style="text-align: center">
+    <h3 style="color:goldenrod">A venir... Photogrammétrie par drone
+    </h3>
+    <br/>
+  </div>
+</div>
