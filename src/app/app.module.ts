@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import {
   MatGridListModule,
   MatCardModule,
@@ -17,7 +18,6 @@ import {
 import { DashboardComponent } from './materials/dashboard/dashboard.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { NavbarComponent } from './materials/navbar/navbar.component';
-
 
 const routes: Routes = [
   {
@@ -36,7 +36,7 @@ const routes: Routes = [
     AppComponent,
     HomeComponent,
     DashboardComponent,
-    NavbarComponent
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,7 +54,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes)
   ],
   providers: [
-
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],
   bootstrap: [AppComponent]
 })
