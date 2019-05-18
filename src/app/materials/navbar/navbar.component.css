@@ -1,12 +1,15 @@
-.sidenav-container {
-  height: 100%;
+
+
+li {
+  padding-top:25px;
+  text-align:center
 }
 
-.sidenav {
-  width: 200px;
+a:hover {
+  color: black !important;
 }
 
-.mat-toolbar.mat-primary {
-  position: sticky;
-  top: 0;
+a {
+  cursor: pointer;
+  color:darkgray !important;
 }

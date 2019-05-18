@@ -18,6 +18,8 @@ import {
 import { DashboardComponent } from './materials/dashboard/dashboard.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { NavbarComponent } from './materials/navbar/navbar.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 const routes: Routes = [
   {
@@ -37,6 +39,8 @@ const routes: Routes = [
     HomeComponent,
     DashboardComponent,
     NavbarComponent,
+    HeaderComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
