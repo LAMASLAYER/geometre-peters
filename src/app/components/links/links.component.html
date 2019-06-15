@@ -1,22 +1,85 @@
-<div class="row">
+<div class="row  d-none d-sm-none d-md-flex">
   <div style="background-color:rgb(253,236,1); overflow: hidden" class="col-12">
     <img style="max-width: 100%; margin-top: -200px; float: right" src="../../../assets/bgy.png">
   </div>
 </div>
 
-<div class="row">
+<div class="row d-none d-sm-none d-md-flex" style="margin-bottom:10%">
   <div class="col-3"></div>
   <div class="col-6" style="background-color: white; margin-top: -200px">
-    <h2>Title</h2>
-    <hr>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nemo fugiat odio sequi iure vero officia, q
-      uam eos laborum tenetur, non veniam, quis aspernatur omnis? Qui cumque ipsum aut dolorem.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nemo fugiat odio sequi iure vero officia, q
-      uam eos laborum tenetur, non veniam, quis aspernatur omnis? Qui cumque ipsum aut dolorem.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nemo fugiat odio sequi iure vero officia, q
-      uam eos laborum tenetur, non veniam, quis aspernatur omnis? Qui cumque ipsum aut dolorem.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nemo fugiat odio sequi iure vero officia, q
-      uam eos laborum tenetur, non veniam, quis aspernatur omnis? Qui cumque ipsum aut dolorem.</p>
+    <div class="row">
+      <h2 class="col-12" style="margin-top: 2%">Liens utiles</h2>
+      <hr>
+    </div>
+
+    <div class="row">
+      <div class="col-4">
+        <img (click)="open('http://www.gipl.be/')" src="../../../assets/links/link5.svg" style="max-width: 100%; margin-top: 25%" id="link5" alt="link5"/>
+        <label for="link5">Différentes fiches pour mieux comprendre l'utilité et le métier du géomètre</label>
+      </div>
+      <div class="col-4">
+        <img (click)="open('http://geoportail.wallonie.be/walonmap')" src="../../../assets/links/link4.png" style="max-width: 100%" id="link4" alt="link4"/>
+        <label for="link4">Carte de la Wallonie</label>
+      </div>
+      <div class="col-4">
+        <img (click)="open('https://www.cadastre.be/')" src="../../../assets/links/link3.png" style="max-width: 100%; margin-top: 25%" id="link3" alt="link3"/>
+        <label for="link3">Accès aux plans cadastraux</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-4">
+        <img (click)="open('http://www.ngi.be/FR/FR0.shtm')" src="../../../assets/links/link1.jpg" style="max-width: 100%; margin-top: 25%" id="link1" alt="link1"/>
+        <label for="link1">Le site de l'IGN</label>
+      </div>
+      <div class="col-4">
+        <img (click)="open('http://www.argelg.be')" src="../../../assets/links/link2.gif" style="max-width: 100%" id="link2" alt="link2"/>
+        <label for="link4">Assosiation Royale des Géomètres de Liège ARGELg</label>
+      </div>
+      <div class="col-2"></div>
+    </div>
+
   </div>
   <div class="col-6"></div>
+</div>
+
+<div class="row d-flex d-sm-flex d-md-none" style="margin-bottom:10%">
+  <div class="col-3"></div>
+  <div class="col-6" style="background-color: white;">
+    <div class="row">
+      <h2 class="col-12" style="margin-top: 2%">Liens utiles</h2>
+      <hr>
+    </div>
+
+    <div class="row" style="text-align: center">
+      <div class="col-12">
+        <img (click)="open('http://www.gipl.be/')" src="../../../assets/links/link5.svg" style="max-width: 100%; margin-top: 25%" id="mlink5" alt="link5"/>
+        <label for="mlink5">Différentes fiches pour mieux comprendre l'utilité et le métier du géomètre</label>
+      </div>
+    </div>
+    <div class="row" style="text-align: center">
+      <div class="col-12">
+        <img (click)="open('http://geoportail.wallonie.be/walonmap')" src="../../../assets/links/link4.png" style="max-width: 100%" id="mlink4" alt="link4"/>
+        <label for="mlink4">Carte de la Wallonie</label>
+      </div>
+    </div>
+    <div class="row" style="text-align: center">
+      <div class="col-12">
+        <img (click)="open('https://www.cadastre.be/')" src="../../../assets/links/link3.png" style="max-width: 100%;" id="mlink3" alt="link3"/>
+        <label for="mlink3">Accès aux plans cadastraux</label>
+      </div>
+    </div>
+    <div class="row" style="text-align: center">
+      <div class="col-12">
+        <img (click)="open('http://www.ngi.be/FR/FR0.shtm')" src="../../../assets/links/link1.jpg" style="max-width: 100%;" id="mlink1" alt="link1"/>
+        <label for="mlink1">Le site de l'IGN</label>
+      </div>
+    </div>
+  <div class="row">
+      <div class="col-12" style="text-align: center">
+        <img (click)="open('http://www.argelg.be')" src="../../../assets/links/link2.gif" style="max-width: 100%" id="mlink2" alt="link2"/>
+        <label for="mlink4">Assosiation Royale des Géomètres de Liège ARGELg</label>
+      </div>
+  </div>
+</div>
 </div>

@@ -12,4 +12,8 @@ export class LinksComponent implements OnInit {
   ngOnInit() {
   }
 
+  public open(url: string) {
+    window.open(url);
+  }
+
 }

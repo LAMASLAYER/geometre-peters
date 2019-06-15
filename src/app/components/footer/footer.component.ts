@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivitiesHelper} from '../utils/activitiesHelper';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  private router: Router;
+
+  constructor(router: Router) {
+    this.router = router;
+  }
 
   ngOnInit() {
+  }
+
+  public go(destination: string) {
+    this.router.navigate(['activities']);
   }
 
 }

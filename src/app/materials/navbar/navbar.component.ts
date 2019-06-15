@@ -23,12 +23,13 @@ export class NavbarComponent {
     this.router = router;
   }
 
-  public goHome(destination: string) {
+  public go(destination: string) {
     this.router.navigate([destination]);
   }
 
   public goTo(destination: string) {
     ActivitiesHelper.ACTIVITY = destination;
-    this.router.navigate(['activities']);
+    this.router.navigateByUrl('/home', {skipLocationChange: true})
+      .then(() => this.router.navigate(['activities']));
   }
 }

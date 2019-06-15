@@ -1,19 +1,18 @@
-<div class="grid-container" style="background-color:#42448F; padding: 0; margin: 0">
+<div class="grid-container d-sm-none d-none d-md-block" style="background-color:#42448F; padding: 0; margin: 0">
   <div class="row" style=" padding: 0; margin: 0">
     <div class="col-4" style="text-align: center; margin-top: 1%">
       <img src="../../../assets/logo3.png" style="cursor: pointer">
     </div>
     <div class="col-4" style="margin-top: 3%">
-      <h4>Site</h4>
+      <h4 style="cursor: default">Site</h4>
       <ul style="list-style-type: none; padding: 0">
-        <li><p>Accueil</p></li>
-        <li><p>Activités</p></li>
-        <li><p>Liens utile</p></li>
-        <li><p>Contact</p></li>
+        <li><p (click)="go('home')">Accueil</p></li>
+        <li><p (click)="go('links')">Liens utiles</p></li>
+        <li><p (click)="go('contact')">Contact</p></li>
       </ul>
     </div>
     <div class="col-4" style="margin-top: 3%">
-      <h4>Contact</h4>
+      <h4 style="cursor: default">Contact</h4>
       <ul style="list-style-type: none; padding: 0">
         <li><p>+32 495 56 02 85</p></li>
         <li><p>geometre.peters@gmail.com</p></li>

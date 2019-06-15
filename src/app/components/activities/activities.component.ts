@@ -17,10 +17,11 @@ export class ActivitiesComponent implements OnInit {
   }
 
   ngOnInit() {
-    // if (ActivitiesHelper.ACTIVITY === ('' || null || undefined)) {
-    //   this.router.navigate(['home']);
-    // }
+    if (ActivitiesHelper.ACTIVITY === ('' || null || undefined)) {
+      this.router.navigate(['home']);
+    }
     this.activity = ActivitiesHelper.ACTIVITY;
+    console.log(this.activity);
   }
 
 }

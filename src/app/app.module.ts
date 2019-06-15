@@ -22,6 +22,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ActivitiesComponent } from './components/activities/activities.component';
 import { LinksComponent } from './components/links/links.component';
+import { MobnavbarComponent } from './components/mobnavbar/mobnavbar.component';
 
 const routes: Routes = [
   {
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     path: 'activities',
     component: ActivitiesComponent
+  },
+  {
+    path: 'links',
+    component: LinksComponent
   }
 ];
 
@@ -49,6 +54,7 @@ const routes: Routes = [
     FooterComponent,
     ActivitiesComponent,
     LinksComponent,
+    MobnavbarComponent,
   ],
   imports: [
     BrowserModule,
