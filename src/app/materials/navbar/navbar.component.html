@@ -1,19 +1,19 @@
 <ul class="row" style="list-style-type: none; padding: 0; margin: 0">
   <li class="col-2"></li>
-  <li class="col-2"><button>Accueil</button></li>
+  <li (click)="goHome('home')" class="col-2"><button>Accueil</button></li>
   <li class="col-2">
     <div class="dropdown">
     <button class="dropbtn">Activités</button>
     <div style="width:200px" class="dropdown-content">
-      <a>Topographie</a>
-      <a>Division</a>
-      <a>Calcul de Quotité</a>
-      <a>Mesurage technique</a>
-      <a>Etat des lieux</a>
-      <a>Implantation de batiment</a>
-      <a>Bornage</a>
-      <a>Expertise immobilière</a>
-      <a>Photogrammétrie par drone</a>
+      <a (click)="goTo('Relevé Topographique')">Topographie</a>
+      <a (click)="goTo('Division de Terrain')">Division</a>
+      <a (click)="goTo('Calcul de Quotité')">Calcul de Quotité</a>
+      <a (click)="goTo('Mesurage Technique')">Mesurage technique</a>
+      <a (click)="goTo('Etat des Lieux')">Etat des lieux</a>
+      <a (click)="goTo('Implantation de Bâtiment')">Implantation de batiment</a>
+      <a (click)="goTo('Bornage')">Bornage</a>
+      <a (click)="goTo('Expertise immobilière')">Expertise immobilière</a>
+      <a (click)="goTo('Photogrammétrie par Drone')">Photogrammétrie par drone</a>
     </div>
     </div>
   </li>
@@ -21,4 +21,4 @@
   <li class="col-2"><button>Contact</button></li>
   <li class="col-2"></li>
 </ul>
-<hr>
+<hr style="margin-bottom: 0">

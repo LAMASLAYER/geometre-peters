@@ -91,3 +91,15 @@ ul li ul li {
 .row {
   margin: 0;
 }
+
+div>p {
+  margin-top: 20px;
+  color:#42448F;
+  font-weight: bold;
+  cursor:pointer;
+}
+
+.row>img {
+  height: 50px;
+  width: 50px;
+}

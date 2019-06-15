@@ -1,4 +1,4 @@
-<div class="container">
+<div style="margin-top: 3%" class="container">
   <div class="row" style=" padding: 0; margin: 0">
     <div class="col-6">
       <div class=row>
@@ -25,22 +25,67 @@
 
 <div class="row col-12" style="background-color:rgb(242,242,242); margin-top: 5%; margin-right:0">
   <div class="row col-12">
-    <h2 style="margin-top: 3%; margin-left: 3%; margin-bottom: 3%">Activités</h2>
+    <h2 style="margin-top: 3%; margin-left: 3%; margin-bottom: 3%;  color:#42448F;">Activités</h2>
     <hr>
   </div>
   <div class="row col-12" style="text-align: left">
-    <div class="col-4"><p>Topographie</p></div>
-    <div class="col-4"><p>Division</p></div>
-    <div class="col-4"><p>Calcul de Quotité</p></div>
+    <div class="col-4">
+      <div  style="margin-bottom: 2%" class="row">
+        <img src="../../../assets/topo.png" alt="topo"/>
+        <p class="col-6" (click)="goTo('Relevé Topographique')">Topographie</p>
+      </div>
+    </div>
+    <div class="col-4">
+      <div  style="margin-bottom: 2%" class="row">
+        <img src="../../../assets/division.png" alt="division"/>
+        <p class="col-6" (click)="goTo('Division de Terrain')">Division</p>
+      </div>
+    </div>
+    <div class="col-4">
+      <div  style="margin-bottom: 2%" class="row">
+        <img src="../../../assets/quotites.png" alt="quotites"/>
+        <p class="col-6" (click)="goTo('Calcul de Quotité')">Calcul de Quotité</p>
+      </div>
+    </div>
   </div>
   <div class="row col-12" style="text-align: left">
-    <div class="col-4"><p>Mesurage technique</p></div>
-    <div class="col-4"><p>Etat des lieux</p></div>
-    <div class="col-4"><p>Implantation de batiment</p></div>
+    <div class="col-4">
+      <div style="margin-bottom: 2%" class="row">
+        <img src="../../../assets/mtech.png" alt="mtech"/>
+        <p class="col-6" (click)="goTo('Mesurage Technique')">Mesurage technique</p>
+      </div>
+    </div>
+    <div class="col-4">
+      <div style="margin-bottom: 2%" class="row">
+        <img src="../../../assets/etatlieux.png" alt="etatlieux"/>
+        <p class="col-6" (click)="goTo('Etat des Lieux')">Etat des lieux</p>
+      </div>
+    </div>
+    <div class="col-4">
+      <div style="margin-bottom: 2%" class="row">
+        <img src="../../../assets/implantation.png" alt="implantation"/>
+        <p class="col-6" (click)="goTo('Implantation de Bâtiment')">Implantation de bâtiment</p>
+      </div>
+    </div>
   </div>
   <div class="row col-12" style="text-align: left;margin-bottom: 3%">
-    <div class="col-4"><p>Bornage</p></div>
-    <div class="col-4"><p>Expertise immobilière</p></div>
-    <div class="col-4"><p>Photogrammétrie par drone</p></div>
+    <div class="col-4">
+      <div style="margin-bottom: 2%" class="row">
+        <img src="../../../assets/bornage.png" alt="bornage"/>
+        <p class="col-6" (click)="goTo('Bornage')">Bornage</p>
+      </div>
+    </div>
+    <div class="col-4">
+      <div style="margin-bottom: 2%" class="row">
+        <img src="../../../assets/expertiseimmo.png" alt="expertiseimmo"/>
+        <p class="col-6" (click)="goTo('Expertise immobilière')">Expertise immobilière</p>
+      </div>
+    </div>
+    <div class="col-4">
+      <div style="margin-bottom: 2%" class="row">
+        <img src="../../../assets/drone.png" alt="drone"/>
+        <p class="col-6" (click)="goTo('Photogrammétrie par Drone')">Photogrammétrie par drone</p>
+      </div>
+    </div>
   </div>
 </div>
