@@ -11,8 +11,18 @@ import {ActivitiesHelper} from '../../components/utils/activitiesHelper';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent {
+  get displayed(): boolean {
+    console.log(this._displayed)
+    return this._displayed;
+  }
+
+  set displayed(value: boolean) {
+    console.log(this._displayed)
+    this._displayed = value;
+  }
 
   private router: Router;
+  private _displayed: boolean;
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
@@ -32,4 +42,5 @@ export class NavbarComponent {
     this.router.navigateByUrl('/home', {skipLocationChange: true})
       .then(() => this.router.navigate(['activities']));
   }
+
 }
