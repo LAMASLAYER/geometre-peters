@@ -18,8 +18,8 @@ export class FooterComponent implements OnInit {
   ngOnInit() {
   }
 
-  public go(destination: string) {
-    this.router.navigate(['activities']);
+  public move(destination: string) {
+    this.router.navigate([destination]);
   }
 
 }
