@@ -24,11 +24,6 @@ export class NavbarComponent {
   private router: Router;
   private _displayed: boolean;
 
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => result.matches)
-    );
-
   constructor(private breakpointObserver: BreakpointObserver, router: Router) {
     this.router = router;
   }
