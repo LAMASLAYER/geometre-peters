@@ -20,6 +20,9 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { NavbarComponent } from './materials/navbar/navbar.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ActivitiesComponent } from './components/activities/activities.component';
+import { LinksComponent } from './components/links/links.component';
+import { MobnavbarComponent } from './components/mobnavbar/mobnavbar.component';
 
 const routes: Routes = [
   {
@@ -30,6 +33,14 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent
+  },
+  {
+    path: 'activities',
+    component: ActivitiesComponent
+  },
+  {
+    path: 'links',
+    component: LinksComponent
   }
 ];
 
@@ -41,6 +52,9 @@ const routes: Routes = [
     NavbarComponent,
     HeaderComponent,
     FooterComponent,
+    ActivitiesComponent,
+    LinksComponent,
+    MobnavbarComponent,
   ],
   imports: [
     BrowserModule,

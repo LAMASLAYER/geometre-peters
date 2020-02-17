@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+label {
+  text-align: center;
+  color: darkgray;
+  font-family: 'Montserrat';
+}
+
+.col-4 {
+  text-align: center;
+}
+
+img{
+  cursor: pointer;
+}
+
+body{
+
+}

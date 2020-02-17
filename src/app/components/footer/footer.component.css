@@ -5,3 +5,7 @@
 li {
   color: darkgray;
 }
+
+p {
+  cursor: pointer;
+}

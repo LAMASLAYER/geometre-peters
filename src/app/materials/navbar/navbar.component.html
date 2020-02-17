@@ -1,9 +1,70 @@
-<ul class="row" style="list-style-type: none; padding: 0; margin: 0">
+<ul class="row d-none d-sm-none d-md-flex" style="list-style-type: none; padding: 0; margin: 0">
   <li class="col-2"></li>
-  <li class="col-2"><a>Accueil</a></li>
-  <li class="col-2"><a>Activités</a></li>
-  <li class="col-2"><a>Liens utiles</a></li>
-  <li class="col-2"><a>Contact</a></li>
+  <li (click)="go('home')" class="col-2"><button>Accueil</button></li>
+  <li class="col-2">
+    <div class="dropdown">
+    <button class="dropbtn">Activités</button>
+    <div style="width:200px" class="dropdown-content">
+      <a (click)="goTo('Relevé Topographique')">Topographie</a>
+      <a (click)="goTo('Division')">Division</a>
+      <a (click)="goTo('Calcul de Quotité')">Calcul de Quotité</a>
+      <a (click)="goTo('Mesurage Technique')">Mesurage technique</a>
+      <a (click)="goTo('Etat des Lieux')">Etat des lieux</a>
+      <a (click)="goTo('Implantations')">Implantations</a>
+      <a (click)="goTo('Bornage')">Bornage</a>
+      <a (click)="goTo('Expertise immobilière')">Expertise immobilière</a>
+      <!--<a (click)="goTo('Photogrammétrie par Drone')">Photogrammétrie par drone</a>-->
+    </div>
+    </div>
+  </li>
+  <li class="col-2" (click)="go('links')"><button>Liens utiles</button></li>
+  <li class="col-2"><button data-toggle="modal" data-target="#exampleModal">Contact</button></li>
   <li class="col-2"></li>
 </ul>
-<hr>
+<ul class="row d-flex d-sm-flex d-md-none" style="list-style-type: none; padding: 0; margin: 0">
+  <li (click)="go('home')" class="col-12"><button>Accueil</button></li>
+  <li class="col-12">
+    <div class="dropdown">
+      <button (click)="displayed=true;" class="dropbtn">Activités</button>
+      <div *ngIf="displayed==true" style="width:200px" class="dropdown-content">
+        <a (click)="goTo('Relevé Topographique'); displayed=false">Topographie</a>
+        <a (click)="goTo('Division'); displayed=false">Division</a>
+        <a (click)="goTo('Calcul de Quotité'); displayed=false">Calcul de Quotité</a>
+        <a (click)="goTo('Mesurage Technique'); displayed=false">Mesurage technique</a>
+        <a (click)="goTo('Etat des Lieux'); displayed=false">Etat des lieux</a>
+        <a (click)="goTo('Implantations'); displayed=false">Implantations</a>
+        <a (click)="goTo('Bornage'); displayed=false">Bornage</a>
+        <a (click)="goTo('Expertise immobilière'); displayed=false">Expertise immobilière</a>
+        <!--<a (click)="goTo('Photogrammétrie par Drone'); displayed=false">Photogrammétrie par drone</a>-->
+      </div>
+    </div>
+  </li>
+  <li class="col-12" (click)="go('links')"><button>Liens utiles</button></li>
+  <li class="col-12"><button data-toggle="modal" data-target="#exampleModal">Contact</button></li>
+</ul>
+<hr style="margin-bottom: 0">
+
+
+<!-- Modal -->
+<div style="margin-top: 10%" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Contact</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div style="text-align: center" class="modal-body">
+        <p style="margin-right: 60px; margin-top:5%" type="email"><strong>Mail:</strong>    geometre.peters@gmail.com</p>
+
+
+        <p style="margin-right: 60px; margin-top:5%" type="tel"><strong>Téléphone:</strong> +32 495 56 02 85</p>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
